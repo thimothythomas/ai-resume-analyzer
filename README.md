@@ -81,9 +81,6 @@ cd frontend
 npm start
 ```
 
-- Frontend: http://localhost:3000
-- Backend: http://localhost:3001
-
 ## Project Structure
 
 ```
@@ -144,30 +141,3 @@ This project uses **Meta-Llama-3-8B-Instruct** via Hugging Face which provides:
 - ⚡ Fast and accurate ATS analysis
 - 🔍 Intelligent skill extraction and domain detection
 - 🆓 Free tier available for testing
-
-**Why Pure AI?**
-- No hardcoded skill dictionaries or keyword lists
-- AI naturally understands synonyms and context
-- Adapts to evolving industry terminology
-- Handles niche and emerging skills automatically
-- More accurate than rule-based systems
-
-## Troubleshooting
-
-### Backend won't start
-- Make sure you added your Hugging Face API key to `.env`
-- Ensure port 3001 is not in use
-- Verify your API token is valid at https://huggingface.co/settings/tokens
-
-### Frontend errors
-- Run `npm install` in the frontend directory
-- Check that backend is running on port 3001
-
-### File upload issues
-- Create `uploads/` folder in backend directory
-- Check file size (must be < 10MB)
-- Verify file format (PDF, DOC, DOCX only)
-
-## License
-
-MIT
