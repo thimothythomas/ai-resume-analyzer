@@ -1,6 +1,6 @@
 # AI Resume Analyzer
 
-A full-stack ATS (Applicant Tracking System) resume analyzer powered entirely by xAI's Grok with zero hardcoded logic.
+A full-stack ATS (Applicant Tracking System) resume analyzer powered entirely by Hugging Face AI (Meta-Llama-3-8B) with zero hardcoded logic.
 
 ## Tech Stack
 
@@ -11,7 +11,7 @@ A full-stack ATS (Applicant Tracking System) resume analyzer powered entirely by
 
 ### Backend
 - NestJS (Node.js framework)
-- xAI Grok Beta (100% AI-powered analysis)
+- Hugging Face AI with Meta-Llama-3-8B-Instruct (100% AI-powered analysis)
 - PDF/DOC parsing
 - Multer for file uploads
 
@@ -35,13 +35,13 @@ A full-stack ATS (Applicant Tracking System) resume analyzer powered entirely by
 
 ## Setup Instructions
 
-### 1. Get Grok API Key
+### 1. Get Hugging Face API Key
 
-1. Go to [xAI Console](https://console.x.ai/)
+1. Go to [Hugging Face](https://huggingface.co/settings/tokens)
 2. Sign in or create an account
-3. Navigate to API Keys section
-4. Create a new API key
-5. Copy your API key
+3. Click "New token" to create an access token
+4. Give it a name and select "Read" access
+5. Copy your API token
 
 ### 2. Backend Setup
 
@@ -53,9 +53,9 @@ npm install
 cp .env.example .env
 ```
 
-Edit `.env` and add your Grok API key:
+Edit `.env` and add your Hugging Face API key:
 ```env
-GROK_API_KEY=your_actual_api_key_here
+HUGGINGFACE_API_KEY=your_actual_api_key_here
 PORT=3001
 FRONTEND_URL=http://localhost:3000
 ```
@@ -103,7 +103,7 @@ Ai_resume_analyser/
     │   ├── resume/
     │   │   ├── resume.controller.ts
     │   │   ├── resume.service.ts
-    │   │   ├── gemini.service.ts    # Gemini AI integration
+    │   │   ├── ai.service.ts        # Hugging Face AI integration
     │   │   └── resume.module.ts
     │   ├── app.module.ts
     │   └── main.ts
@@ -135,15 +135,15 @@ Upload and analyze a resume
 }
 ```
 
-## Grok AI Model
+## Hugging Face AI Model
 
-This project uses **xAI Grok Beta** which is:
+This project uses **Meta-Llama-3-8B-Instruct** via Hugging Face which provides:
 - 🧠 Advanced reasoning and natural language understanding
 - 🎯 Multi-domain expertise across all industries
 - 📝 Supports long context (resumes + job descriptions)
 - ⚡ Fast and accurate ATS analysis
 - 🔍 Intelligent skill extraction and domain detection
-- 🌐 Real-time knowledge and industry insights
+- 🆓 Free tier available for testing
 
 **Why Pure AI?**
 - No hardcoded skill dictionaries or keyword lists
@@ -155,9 +155,9 @@ This project uses **xAI Grok Beta** which is:
 ## Troubleshooting
 
 ### Backend won't start
-- Make sure you added your Grok API key to `.env`
+- Make sure you added your Hugging Face API key to `.env`
 - Ensure port 3001 is not in use
-- Verify your API key is valid at https://console.x.ai/
+- Verify your API token is valid at https://huggingface.co/settings/tokens
 
 ### Frontend errors
 - Run `npm install` in the frontend directory
