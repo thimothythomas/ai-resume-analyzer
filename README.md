@@ -1,17 +1,17 @@
 # AI Resume Analyzer
 
-A full-stack ATS (Applicant Tracking System) resume analyzer powered entirely by Hugging Face AI (Meta-Llama-3-8B) with zero hardcoded logic.
+A full-stack ATS (Applicant Tracking System) resume analyzer powered entirely by Hugging Face AI (Meta-Llama-3-8B) .
 
 ## Tech Stack
 
 ### Frontend
-- React 18 with TypeScript
+- React with TypeScript
 - Axios for API calls
-- Modern glassmorphic UI with animations
+
 
 ### Backend
 - NestJS (Node.js framework)
-- Hugging Face AI with Meta-Llama-3-8B-Instruct (100% AI-powered analysis)
+- Hugging Face AI with Meta-Llama-3-8B-Instruct 
 - PDF/DOC parsing
 - Multer for file uploads
 
@@ -117,20 +117,6 @@ Upload and analyze a resume
 - Content-Type: multipart/form-data
 - Body: `resume` (file)
 
-**Response:**
-```json
-{
-  "success": true,
-  "data": {
-    "score": 85,
-    "strengths": ["Strong technical skills", "..."],
-    "improvements": ["Add quantifiable achievements", "..."],
-    "recommendations": ["Include certifications", "..."],
-    "skills": ["JavaScript", "React", "..."],
-    "experience": ["5 years in software development", "..."]
-  }
-}
-```
 
 ## Hugging Face AI Model
 
